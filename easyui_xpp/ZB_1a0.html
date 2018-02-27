@@ -169,8 +169,92 @@
             </div>
         </div>
     </div>
+    <a href="#" class="link-m">+选择你的专属老师</a>
 </div>
 <!--E--老师介绍-->
+<!--S--战绩榜-->
+<div class="record-zj">
+    <h2>树袋学员战绩榜</h2>
+    <p>— 让你变得比你想象中的更优秀 —</p>
+    <div class="tab-tab">
+        <ul class="tab-t">
+            <li class="fir cur">国际课程提分</li>
+            <li class="sec">国际学校备考</li>
+        </ul>
+        <div class="tab-all">
+            <div class="tab-b" style="display: block">
+                <table border="1">
+                    <tr>
+                        <th>优秀学员</th>
+                        <th>学员战绩</th>
+                        <th>学习时间</th>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="tab-b">
+                <table border="1">
+                    <tr>
+                        <th>优秀学员1</th>
+                        <th>学员战绩1</th>
+                        <th>学习时间1</th>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                    <tr>
+                        <td>王老师</td>
+                        <td>这里显示学员战绩</td>
+                        <td>三个月</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="link-m">+查看更多学员分员</a>
+</div>
+<!--E--战绩榜-->
 </body>
 </html>
 <script>
@@ -179,10 +263,20 @@
         $('.carousel').carousel({
             interval: 2000
         });
-        /*tab切换*/
+        /*课程体系tab切换*/
         $('.tab-tit li').hover(function(){
-            var divC = $('.tab-main .tab-item');
+            var divC = $('.tab-all .tab-item');
             var liC = $('.tab-tit li');
+            var eqC = $(this).index();
+            divC.css("display","none");
+            liC.removeClass("cur");
+            $(this).addClass("cur");
+            divC.eq(eqC).css("display","block");
+        });
+        /*战绩榜tab切换*/
+        $('.tab-t li').hover(function(){
+            var divC = $('.tab-all .tab-b');
+            var liC = $('.tab-t li');
             var eqC = $(this).index();
             divC.css("display","none");
             liC.removeClass("cur");

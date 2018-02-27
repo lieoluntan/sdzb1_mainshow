@@ -83,6 +83,40 @@ body,ul{
     background-color: white;
 }
 
-
-
+/*底部*/
+.footer{
+    width:100%;
+    background-color: #2c2c2c;
+    height:180px;
+}
+.footer-con{
+    width:1000px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.footer-txt{
+    display: block;
+    float: left;
+}
+.footer-txt ul{
+    display: block;
+    overflow: hidden;
+    padding-top:30px;
+}
+.footer-txt ul li{
+    display: block;
+    float: left;
+    padding:0 20px;
+    border-right: 1px solid #323232;
+}
+.footer-txt ul li a{
+    color:white;
+}
+.footer-txt ul li:last-child{
+    border:none;
+}
+.footer-txt p{
+    color:#f0f0f0;
+    font-size:14px;
+}
 

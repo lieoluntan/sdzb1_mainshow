@@ -240,8 +240,41 @@ html::-webkit-scrollbar {
     top:0;
     display: none;
 }
-
-
-
-
+/*战绩榜*/
+.record-zj{
+    width: 1000px;
+    margin:0 auto;
+    text-align: center;
+}
+.tab-b{
+    display: none;
+}
+.tab-tab .tab-t{
+    display: block;
+    overflow: hidden;
+    width:200px;
+    margin:0 auto;
+}
+.tab-tab .tab-t li{
+    display: block;
+    cursor: pointer;
+}
+.tab-tab .tab-t li.fir{
+    float: left;
+}
+.tab-tab .tab-t li.sec{
+    float: right;
+}
+.tab-t .cur{
+    color: red;
+}
+.tab-b table{
+    display: block;
+    width:600px;
+    margin:20px auto;
+}
+.tab-b table th{
+    text-align: center;
+    width:200px;
+}
 
