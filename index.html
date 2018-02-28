@@ -26,20 +26,17 @@
             display: none;
         }
     </style>
+
 </head>
 <script>
   $(document).ready(function() {
-    $("#menu_aa").click(function () {
-      document.getElementById('ifr1a').src = "easyui_xpp/ZB_1a0.html";
-      console.log("点击了首页");
-    });
-      $("#menu_ac").click(function () {
+      $("#menu_ac ,#menu_aa").click(function () {
           document.getElementById('ifr1ac').src = "easyui_xpp/ZB_1a0.html";
           console.log("点击了首页");
       });
     $("#menu_a0").click(function () {
-      document.getElementById('ifr1a0').src = "easyui_xpp/ZB_1a1.html";
-      console.log("点击了在线课程");
+          document.getElementById('ifr1a0').src = "easyui_xpp/ZB_1a1.html";
+          console.log("点击了在线课程");
     });
     $("#menu_a1").click(function () {
       document.getElementById('ifr1a1').src = "easyui_xpp/ZB_1a2.html";
@@ -63,8 +60,8 @@
 <!--S--顶部导航条-->
 <div class="header">
     <ul class="nav-ul idTabs">
-        <a href="#zero" class="selected" id="menu_aa"> <img src="HMcode_QD/HMimages/logo-02.png"></a>
-        <li><a id="menu_ac" href="#one1" >首页</a> </li>
+        <a href="#one1" id="menu_aa"> <img src="HMcode_QD/HMimages/logo-02.png"></a>
+        <li><a class="selected" id="menu_ac" href="#one1" >首页</a> </li>
         <li><a id="menu_a0" href="#one" >在线课程</a> </li>
         <li class="drop-li"><a>课程介绍</a>
             <ul class="nav-item">
@@ -83,9 +80,6 @@
 <!--E--顶部导航条-->
 <!--嵌套部分-->
 <div class="qt-block">
-    <div id="zero">
-        <iframe id="ifr1a" name="ifr1a" style="width:100%;" onload="this.height=ifr1a.document.body.scrollHeight" src="easyui_xpp/ZB_1a0.html" frameborder="0"></iframe>
-    </div>
     <div id="one1">
         <iframe id="ifr1ac" name="ifr1ac" style="width:100%;" onload="this.height=ifr1ac.document.body.scrollHeight" src="easyui_xpp/ZB_1a0.html" frameborder="0"></iframe>
     </div>
@@ -125,7 +119,6 @@
 </div>
 <!--E--底部-->
 </body>
-
 </html>
 <script>
     $(".drop-li").hover(function(){
@@ -137,6 +130,5 @@
         }
     });
 </script>
-
 
 
