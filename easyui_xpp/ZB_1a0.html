@@ -10,40 +10,6 @@
     <link href="../HMcode_QD/HMcss/animate.min.css" rel="stylesheet">
     <link href="../HMcode_QD/HMcss/main.css" rel="stylesheet">
     <link href="../HMcode_QD/HMcss/ZB_1a0.css" rel="stylesheet">
-    <script>
-        $(window).load(function(){
-            $('#myCarousel').addClass("fadeInRight");
-            $('.online').delay(1000).addClass("fadeInUp");
-        });
-        $(document).ready(function () {
-            var online =  $('.online').offset().top;
-            var appoint =  $('.appoint').offset().top;
-            var course =  $('.course-box').offset().top;
-            var inter =  $('.inter-bk').offset().top;
-            var teacher = $('.teacher-box').offset().top;
-            var record =  $('.record-zj').offset().top;
-            var wH = $(window).height();
-            $(window).scroll(function(){
-                var oWinSrcHei = $(window).scrollTop();
-                if ((oWinSrcHei + 400)>online) {
-                    $('.appoint').addClass('fadeInLeft');
-                }
-                if ((oWinSrcHei + 450)>appoint) {
-                    $('.course-box').addClass('fadeInRight');
-                }
-                if ((oWinSrcHei + 400)>course) {
-                    $('.inter-bk').addClass('fadeInUp');
-                }
-                if ((oWinSrcHei + 450)>inter) {
-                    $('.teacher-box').addClass('fadeInDown');
-                }
-                if ((oWinSrcHei + 400)>teacher) {
-                    $('.record-zj').addClass('fadeInUp');
-                }
-            });
-
-        });
-    </script>
 </head>
 <body>
 <!--S--轮播-->
@@ -331,22 +297,18 @@
         },function () {
             $(this).find(".img-dd").removeClass("add_transform");
         });
+        /*鼠标经过区域效果*/
+        $('.online ,.appoint ,.course-box ,.inter-bk ,.teacher-box').hover(function(){
+            $(this).addClass("fadeInUp");
+        },function () {
+            $(this).removeClass("fadeInUp");
+        });
+        $('.record-zj').hover(function(){
+            $(this).addClass("fadeInRight");
+        },function () {
+            $(this).removeClass("fadeInRight");
+        })
     });
 
 </script>
-<script>
-    $(document).ready(function () {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 100) {
-                $('.back-to-top').fadeIn('slow');
-            } else {
-                $('.back-to-top').fadeOut('slow');
-            }
-        });
-        $('.back-to-top').click(function(){
-            $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-            return false;
-        });
-        new WOW().init();
-    });
-</script>
+
