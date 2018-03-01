@@ -20,24 +20,26 @@
     <link   rel="stylesheet" type="text/css" href="easyui_xpp/jquery-easyui-136/themes/icon.css"/>
     <link href="js/bootstrap.min.css" rel="stylesheet">
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="HMcode_QD/HMjs/less.min.js" type="text/javascript"></script>
     <link href="HMcode_QD/HMcss/main.css" rel="stylesheet">
     <style>
         .qt-block>div{
             display: none;
         }
     </style>
-
 </head>
 <script>
   $(document).ready(function() {
-      $("#menu_ac ,#menu_aa").click(function () {
+    $("#menu_aa").click(function () {
+      document.getElementById('ifr1a').src = "easyui_xpp/ZB_1a0.html";
+      console.log("点击了首页");
+    });
+      $("#menu_ac").click(function () {
           document.getElementById('ifr1ac').src = "easyui_xpp/ZB_1a0.html";
           console.log("点击了首页");
       });
     $("#menu_a0").click(function () {
-          document.getElementById('ifr1a0').src = "easyui_xpp/ZB_1a1.html";
-          console.log("点击了在线课程");
+      document.getElementById('ifr1a0').src = "easyui_xpp/ZB_1a1.html";
+      console.log("点击了在线课程");
     });
     $("#menu_a1").click(function () {
       document.getElementById('ifr1a1').src = "easyui_xpp/ZB_1a2.html";
@@ -55,21 +57,14 @@
       document.getElementById('ifr1a4').src = "easyui_xpp/ZB_1a5.html";
       console.log("点击了教学成果");
     });
-      /*弹窗*/
-      $('.float-zx').click(function(){
-          $('.zx-alert').show(200);
-      });
-      $(".zx-alert b").click(function () {
-          $('.zx-alert').hide(200);
-      });
   })
 </script>
 <body>
 <!--S--顶部导航条-->
 <div class="header">
     <ul class="nav-ul idTabs">
-        <a href="#one1" id="menu_aa"> <img src="HMcode_QD/HMimages/logo-02.png"></a>
-        <li><a class="selected" id="menu_ac" href="#one1" >首页</a> </li>
+        <a href="#zero" class="selected" id="menu_aa"> <img src="HMcode_QD/HMimages/logo-02.png"></a>
+        <li><a id="menu_ac" href="#one1" >首页</a> </li>
         <li><a id="menu_a0" href="#one" >在线课程</a> </li>
         <li class="drop-li"><a>课程介绍</a>
             <ul class="nav-item">
@@ -88,11 +83,14 @@
 <!--E--顶部导航条-->
 <!--嵌套部分-->
 <div class="qt-block">
+    <div id="zero">
+        <iframe id="ifr1a" name="ifr1a" style="width:100%;height: 500px;" onload="this.height=ifr1a.document.body.scrollHeight" src="easyui_xpp/ZB_1a0.html" frameborder="0"></iframe>
+    </div>
     <div id="one1">
-        <iframe id="ifr1ac" name="ifr1ac" style="width:100%;" onload="this.height=ifr1ac.document.body.scrollHeight" src="easyui_xpp/ZB_1a0.html" frameborder="0"></iframe>
+        <iframe id="ifr1ac" name="ifr1ac" style="width:100%;height: 500px;" onload="this.height=ifr1ac.document.body.scrollHeight" src="easyui_xpp/ZB_1a0.html" frameborder="0"></iframe>
     </div>
     <div id="one">
-        <iframe id="ifr1a0" name="ifr1a0" style="width:100%" onload="this.height=ifr1a0.document.body.scrollHeight" src="easyui_xpp/ZB_1a1.html" frameborder="0"></iframe>
+        <iframe id="ifr1a0" name="ifr1a0" style="width:100%;height: 500px;" onload="this.height=ifr1a0.document.body.scrollHeight" src="easyui_xpp/ZB_1a1.html" frameborder="0"></iframe>
     </div>
     <div id="two1">
         <iframe id="ifr1a1" name="ifr1a1" style="width:100%;" onload="this.height=ifr1a1.document.body.scrollHeight"  frameborder="0"></iframe>
@@ -104,74 +102,22 @@
         <iframe id="ifr1a3" name="ifr1a3"  style="width:100%;" onload="this.height=ifr1a3.document.body.scrollHeight"   frameborder="0"></iframe>
     </div>
     <div id="four">
-        <iframe id="ifr1a4" name="ifr1a4"  style="width:100%;" onload="this.height=ifr1a4.document.body.scrollHeight" frameborder="0"></iframe>
+        <iframe id="ifr1a4" name="ifr1a4"  style="width:100%;" onload="this.height=ifr1a4.document.body.scrollHeight"   frameborder="0"></iframe>
     </div>
 </div>
-<!--S--底部-->
-<div class="footer">
-    <div class="footer-con">
-        <div class="footer-txt">
-            <ul>
-                <li><a href="#">关于我们</a> </li>
-                <li><a href="#">联系我们</a> </li>
-                <li><a href="#">加入我们</a> </li>
-            </ul>
-            <p>400-1798-499</p>
-            <p>@296.shudailaoshi.com.All rights </p>
-            <p>沪ICxxxxxx号</p>
-        </div>
-        <div class="footer-ewm">
-            <p>树袋老师二维码</p>
-        </div>
-    </div>
-</div>
-<!--E--底部-->
-<!--S--悬浮窗-->
-<div class="float-b">
-    <div class="float-tel">
-        <img src="HMcode_QD/HMimages/icon-tel.png">
-        <p class="tel">400-1798-496</p>
-    </div>
-    <div class="float-zx">
-        <img src="HMcode_QD/HMimages/bulb.png">
-        <p class="link-zx" href="#">咨询</p>
-    </div>
-    <div class="zx-alert">
-        <b>×</b>
-        <img src="HMcode_QD/HMimages/bulb.png">
-        <p class="txt">马上和老师聊聊<br>解答你的所有学习问题</p>
-        <a href="tencent://message/?uin=12345&Site=&Menu-=yes" class="abtn">我要咨询</a>
-    </div>
-
-</div>
-<!--E--悬浮窗-->
 </body>
+
 </html>
 <script>
-    window.onload = function (){
-        $(".drop-li").hover(function(){
-            var slideBlock = $(this).find(".nav-item");
-            if(slideBlock.is(":hidden")){
-                slideBlock.slideDown(200);
-            }else {
-                slideBlock.slideUp(200);
-            }
-        });
-        /*ifram高度赋值*/
-        var mm = $('.qt-block').height();
-        if($('#one1').is(":visible")){
-            $('#ifr1ac').attr("height",mm);
-        }else if($('#one').is(":visible")){
-            $('#ifr1a0').attr("height",mm);
-        }else if($('#two1').is(":visible")){
-            $('#ifr1a1').attr("height",mm);
+    $(".drop-li").hover(function(){
+        var slideBlock = $(this).find(".nav-item");
+        if(slideBlock.is(":hidden")){
+            slideBlock.slideDown(200);
+        }else {
+            slideBlock.slideUp(200);
         }
-        else if($('#two2').is(":visible")){
-            $('#ifr1a2').attr("height",mm);
-        } else if($('#three').is(":visible")){
-            $('#ifr1a3').attr("height",mm);
-        }else if($('#four').is(":visible")){
-            $('#ifr1a4').attr("height",mm);
-        }
-    }
+    });
 </script>
+
+
+

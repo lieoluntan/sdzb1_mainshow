@@ -2,8 +2,6 @@ body,ul{
     margin:0;
     padding:0;
 }
-
-
 /* 顶部 */
 .header{
     width:100%;
@@ -121,4 +119,109 @@ body,ul{
     color:#f0f0f0;
     font-size:14px;
 }
+
+/*悬浮窗*/
+.float-tel{
+    position:fixed;
+    top:50%;
+    right:10px;
+    max-width: 100%;
+    margin-top:-30px;
+    height:20px;
+    border-radius:50%;
+    /*display: none;*/
+}
+.float-tel img{
+    display: block;
+    position: relative;
+    width:20px;
+    height:20px;
+    right: 10px;
+}
+.tel{
+    position: absolute;
+    top:0;
+    right:30px;
+    width:100px;
+    display:none;
+}
+.float-tel:hover .tel{
+    display: block;
+}
+.float-zx{
+    position: fixed;
+    height:70px;
+    width:60px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    top:50%;
+    right:10px;
+    margin-top:20px;
+    cursor: pointer;
+    background-color: white;
+}
+.float-zx>img{
+    display: block;
+    max-width: 100%;
+    height:25px;
+    margin:10px auto;
+}
+.float-zx .link-zx{
+    text-align: center;
+}
+.zx-alert{
+    position: fixed;
+    top:50%;
+    left:50%;
+    width:300px;
+    height:260px;
+    margin-left:-150px;
+    margin-top:-130px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    border:1px solid #ccc;
+    z-index: 10;
+    background-color: white;
+    padding:20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: none;
+}
+.zx-alert img{
+    display: block;
+    max-width: 100%;
+    width:80px;
+    margin:0 auto;
+}
+.zx-alert b{
+    position: absolute;
+    right:10px;
+    top:0;
+    font-size:30px;
+    cursor: pointer;
+}
+.zx-alert .txt{
+    text-align: center;
+    padding-top:20px;
+}
+.zx-alert .abtn{
+    display: block;
+    font-size:16px;
+    width:200px;
+    line-height: 36px;
+    text-align: center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    background-color: #f0f0f0;
+    margin:10px auto 0;
+    cursor: pointer;
+}
+
+
 
