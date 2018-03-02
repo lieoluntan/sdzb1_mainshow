@@ -1,7 +1,6 @@
 html::-webkit-scrollbar {
     display: none;
 }
-
 /*轮播*/
 .carousel-control.right ,.carousel-control.left{
     background: none;
@@ -193,6 +192,12 @@ html::-webkit-scrollbar {
     border-top: 1px solid #ccc;
     margin-top:40px;
 }
+#chartmain{
+    width:800px;
+    height:460px;
+    margin:0 auto;
+}
+
 
 /*老师介绍*/
 .teacher-box{
@@ -245,6 +250,7 @@ html::-webkit-scrollbar {
     width: 1000px;
     margin:0 auto;
     text-align: center;
+    height: 400px;
 }
 .tab-b{
     display: none;
@@ -270,11 +276,31 @@ html::-webkit-scrollbar {
 }
 .tab-b table{
     display: block;
-    width:600px;
+    width:800px;
     margin:20px auto;
 }
 .tab-b table th{
+    width:400px;
+    text-align: center;
+}
+.tab-b table th:first-child ,.tab-b table th:last-child{
     text-align: center;
     width:200px;
 }
-
+tfoot{
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+}
+table tr{
+    border-top:1px solid #ccc;
+}
+table td ,table thead th{
+    border-right: 1px solid #ccc;
+}
+table td:first-child{
+    border-left:1px solid #ccc ;
+}
+table thead{
+    border-left:1px solid #ccc ;
+}
