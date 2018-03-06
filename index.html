@@ -15,6 +15,8 @@
     <script type="text/javascript" src="easyui_xpp/jquery-easyui-136/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="easyui_xpp/jquery-easyui-136/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="easyui_xpp/DataTables/datatables.js"></script>
+    <script src="HMcode_QD/HMjs/wow.min.js"></script>
+    <link href="HMcode_QD/HMcss/animate.min.css" rel="stylesheet">
     <!-- xpp的链接文件 -->
     <link   rel="stylesheet" type="text/css" href="easyui_xpp/jquery-easyui-136/themes/gray/easyui.css"/>
     <link   rel="stylesheet" type="text/css" href="easyui_xpp/jquery-easyui-136/themes/icon.css"/>
@@ -22,6 +24,7 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="HMcode_QD/HMjs/less.min.js" type="text/javascript"></script>
     <link href="HMcode_QD/HMcss/main.css" rel="stylesheet">
+    <!--<link href="HMcode_QD/HMless/style.css" rel="stylesheet">-->
     <style>
         .qt-block>div{
             display: none;
@@ -173,5 +176,32 @@
         }else if($('#four').is(":visible")){
             $('#ifr1a4').attr("height",mm);
         }
+        /*监听鼠标滚动事件*/
+        /*首页logo*/
+        var online =  $("#ifr1ac").contents().find('.online').offset().top;
+        var appoint =  $("#ifr1ac").contents().find('.appoint').offset().top;
+        var course =  $("#ifr1ac").contents().find('.course-box').offset().top;
+        var inter =  $("#ifr1ac").contents().find('.inter-bk').offset().top;
+        var teacher = $("#ifr1ac").contents().find('.teacher-box').offset().top;
+        var record =  $("#ifr1ac").contents().find('.record-zj').offset().top;
+        var wH = $(window).height();
+        $(window).scroll(function(){
+            var oWinSrcHei = $(window).scrollTop();
+            if ((oWinSrcHei + 400)>online) {
+                $("#ifr1ac").contents().find('.appoint').addClass('fadeInLeft');
+            }
+            if ((oWinSrcHei + 450)>appoint) {
+                $("#ifr1ac").contents().find('.course-box').addClass('fadeInRight');
+            }
+            if ((oWinSrcHei + 400)>course) {
+                $("#ifr1ac").contents().find('.inter-bk').addClass('fadeInUp');
+            }
+            if ((oWinSrcHei + 450)>inter) {
+                $("#ifr1ac").contents().find('.teacher-box').addClass('fadeInDown');
+            }
+            if ((oWinSrcHei + 400)>teacher) {
+                $("#ifr1ac").contents().find('.record-zj').addClass('fadeInUp');
+            }
+        });
     }
 </script>
